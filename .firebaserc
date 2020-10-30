@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "jeniapp-f7c47"
+  },
+  "targets": {
+    "myconsent-fa8d1": {
+      "hosting": {
+        "goldstart": [
+          "myconsent-fa8d1"
+        ]
+      }
+    }
+  }
+}
