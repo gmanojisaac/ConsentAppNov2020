@@ -13,6 +13,16 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "firebase",
+              "@firebase/app",
+              "@firebase/firestore",
+              "@firebase/component",
+              "@firebase/util",
+              "@firebase/auth",
+              "firebase/app",
+              "@angular/fire/firestore"
+            ],
             "outputPath": "dist/goldstart",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -24,6 +34,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -88,6 +99,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -117,8 +129,16 @@
               "devServerTarget": "goldstart:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
-    }},
-  "defaultProject": "goldstart"
+    }
+  },
+  "defaultProject": "goldstart",
+  "cli": {
+    "analytics": "34bb2918-8d56-46aa-b654-c93b2e84c34b"
+  }
 }
